@@ -27,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:navGraph="@navigation/navigation"
-        android:layout_marginTop="?attr/actionBarSize"
         app:defaultNavHost="true"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

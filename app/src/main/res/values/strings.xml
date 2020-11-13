@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="hint_email">Email address</string>
+    <string name="hint_password">Password</string>
+    <string name="new_user_checkbox_text">New User</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="no_account">No account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="appName">S h o e&#160; &#160;S t o r e</string>
+    <string name="shoes_image_content_description">One line drawing of a shoes pair</string>
+    <string name="password_error">Password must contain at least 4 characters.</string>
+    <string name="confirm_password_error">The password confirmation does not match.</string>
+    <string name="cancel">Cancel</string>
+    <string name="email_error">The email should follow the pattern john@example.com.</string>
 </resources>

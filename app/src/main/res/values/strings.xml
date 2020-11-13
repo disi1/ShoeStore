@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="hint_email">Email address</string>
+    <string name="hint_password">Password</string>
+    <string name="new_user_checkbox_text">New User</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create account</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="no_account">No account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="appName">S h o e S t o r e</string>
+    <string name="shoes_image_content_description">One line drawing of a shoes pair</string>
 </resources>

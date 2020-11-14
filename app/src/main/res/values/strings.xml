@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ShoeStore</string>
+    <string name="app_name">ShoeShop</string>
     <string name="hint_email">Email address</string>
     <string name="hint_password">Password</string>
     <string name="new_user_checkbox_text">New User</string>
@@ -8,10 +8,15 @@
     <string name="hint_confirm_password">Confirm password</string>
     <string name="no_account">No account?</string>
     <string name="sign_up">Sign up</string>
-    <string name="appName">S h o e&#160; &#160;S t o r e</string>
+    <string name="appName">S H O E&#160; &#160;S H O P</string>
     <string name="shoes_image_content_description">One line drawing of a shoes pair</string>
     <string name="password_error">Password must contain at least 4 characters.</string>
     <string name="confirm_password_error">The password confirmation does not match.</string>
     <string name="cancel">Cancel</string>
     <string name="email_error">The email should follow the pattern john@example.com.</string>
+    <string name="welcome_text">Welcome to \n S H O E&#160; &#160;S H O P</string>
+    <string name="seek_find_enjoy">Seek. Find. Enjoy.</string>
+    <string name="walk_your_colors">Walk your colors.</string>
+    <string name="content_description_welcome_fab">Tap to go to Instructions</string>
+    <string name="splash_of_color_content_description">Splash of color</string>
 </resources>

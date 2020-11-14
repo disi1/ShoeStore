@@ -25,14 +25,11 @@
                 android:contentDescription="@string/shoes_image_content_description" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:text="@string/appName"
-                android:textAllCaps="true"
                 android:layout_marginBottom="50dp"
                 android:layout_marginTop="16dp"
-                android:textStyle="bold" />
+                android:layout_gravity="center_horizontal"
+                style="@style/ShoeStoreNameStyle" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_input_text"
@@ -46,6 +43,7 @@
                     android:id="@+id/email_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,6 +61,7 @@
                     android:id="@+id/password_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,6 +80,7 @@
                     android:id="@+id/confirm_password_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -97,6 +97,7 @@
                     android:id="@+id/create_account_button"
                     style="@style/Widget.ShoeStore.Button"
                     android:text="@string/create_account"
+                    android:fontFamily="sans-serif-light"
                     android:visibility="gone"/>
 
             </RelativeLayout>
@@ -106,7 +107,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/no_account"/>
+                android:text="@string/no_account"
+                android:fontFamily="sans-serif-light"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -121,6 +123,7 @@
                     android:id="@+id/cancel_button"
                     style="@style/Widget.ShoeStore.OutlinedButton"
                     android:text="@string/cancel"
+                    android:fontFamily="sans-serif-light"
                     android:visibility="gone"/>
             </RelativeLayout>
 

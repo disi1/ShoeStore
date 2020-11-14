@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(navController.graph)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.loginFragment) {
+            if (destination.id == R.id.loginFragment || destination.id == R.id.welcomeFragment) {
                 toolbar.visibility = View.GONE
             } else {
                 toolbar.visibility = View.VISIBLE

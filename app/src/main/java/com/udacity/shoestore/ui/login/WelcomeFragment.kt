@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
@@ -24,8 +25,8 @@ class WelcomeFragment : Fragment() {
             false
         )
 
-        binding.nextButton.setOnClickListener {
-            Toast.makeText(this.context, "Next button was clicked.", Toast.LENGTH_SHORT).show()
+        binding.nextButton.setOnClickListener {view: View ->
+            view.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
         }
 
         return binding.root

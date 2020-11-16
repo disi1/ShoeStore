@@ -91,6 +91,8 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/login_button"
                     android:text="@string/login"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="25dp"
                     style="@style/Widget.ShoeStore.Button" />
 
                 <com.google.android.material.button.MaterialButton

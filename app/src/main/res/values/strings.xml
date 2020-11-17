@@ -15,12 +15,14 @@
     <string name="cancel">Cancel</string>
     <string name="email_error">The email should follow the pattern john@example.com.</string>
 
+    <!-- Welcome Screen -->
     <string name="welcome_text">Welcome to \n S H O E&#160; &#160;S H O P</string>
     <string name="seek_find_enjoy">Seek. Find. Enjoy.</string>
     <string name="walk_your_colors">Walk your colors.</string>
     <string name="content_description_welcome_fab">Tap to go to Instructions</string>
     <string name="splash_of_color_content_description">Splash of color</string>
 
+    <!-- Instructions Screen -->
     <string name="instructions_first_item_title">Discover our offering!</string>
     <string name="instructions_first_item_text1">Thousands to choose from.</string>
     <string name="instructions_first_item_text2">Find what you love ❤.</string>
@@ -37,5 +39,6 @@
     <string name="content_description_add_button_instructions">Button displayed in the bottom right corner of the Shoes list screen.</string>
     <string name="content_description_list_icon_instructions">List icon</string>
 
-
+    <!-- Shoe List Screen -->
+    
 </resources>

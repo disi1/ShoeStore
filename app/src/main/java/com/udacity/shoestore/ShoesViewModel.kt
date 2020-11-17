@@ -9,7 +9,7 @@ class ShoesViewModel: ViewModel() {
 
     private val _shoes = MutableLiveData<List<Shoe>>(
         mutableListOf(
-            Shoe("Unisex High Top Shoe", 23.5,"Chuck Taylor All Star", "sdfjsdfsd")
+            Shoe("Unisex High Top Shoe", 23.5,"Chuck Taylor All Star", "Very good condition.")
         )
     )
     val shoes: LiveData<List<Shoe>>

@@ -1,4 +1,4 @@
-package com.udacity.shoestore.ui.login
+package com.udacity.shoestore.ui.onboarding
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,22 +9,22 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
-import com.udacity.shoestore.databinding.FragmentInstructionBinding
+import com.udacity.shoestore.databinding.FragmentInstructionsBinding
 
-class InstructionFragment : Fragment() {
+class InstructionsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        val binding = DataBindingUtil.inflate<FragmentInstructionBinding>(
+        val binding = DataBindingUtil.inflate<FragmentInstructionsBinding>(
             inflater,
-            R.layout.fragment_instruction,
+            R.layout.fragment_instructions,
             container,
             false
         )
 
-        binding.getStartedButton.setOnClickListener {
-            Toast.makeText(this.context, "Get Started clicked!", Toast.LENGTH_SHORT).show()
+        binding.getStartedButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment())
         }
 
         return binding.root

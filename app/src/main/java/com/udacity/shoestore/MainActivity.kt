@@ -1,36 +1,45 @@
 package com.udacity.shoestore
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.udacity.shoestore.databinding.ActivityMainBinding
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var navController: NavController
+    private lateinit var appBarConfiguration: AppBarConfiguration
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         Timber.plant(Timber.DebugTree())
+        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(binding.toolbar)
 
-        val navController = this.findNavController(R.id.navHostFragment)
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        navController = this.findNavController(R.id.navHostFragment)
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.shoeListFragment))
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.loginFragment || destination.id == R.id.welcomeFragment || destination.id == R.id.instructionFragment) {
-                toolbar.visibility = View.GONE
+            if (destination.id == R.id.loginFragment || destination.id == R.id.welcomeFragment || destination.id == R.id.instructionsFragment) {
+                binding.toolbar.visibility = View.GONE
             } else {
-                toolbar.visibility = View.VISIBLE
+                binding.toolbar.visibility = View.VISIBLE
             }
         }
 
-        toolbar.setupWithNavController(navController, appBarConfiguration)
+        binding.toolbar.setupWithNavController(navController, appBarConfiguration)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
 }

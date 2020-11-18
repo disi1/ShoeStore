@@ -8,13 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        tools:context=".ui.login.WelcomeFragment">
+        tools:context=".ui.onboarding.WelcomeFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="24dp"
-            tools:context=".ui.login.InstructionFragment">
+            tools:context=".ui.onboarding.InstructionsFragment">
 
             <ImageView
                 android:id="@+id/splash"
@@ -31,7 +31,7 @@
                 android:id="@+id/shoes"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:src="@drawable/ic_shoe"
+                android:src="@drawable/img_shoe"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.35"
                 app:layout_constraintStart_toStartOf="parent"

@@ -17,6 +17,7 @@ import com.udacity.shoestore.ShoesViewModel
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 import com.udacity.shoestore.databinding.ShoeItemBinding
+import com.udacity.shoestore.ui.onboarding.WelcomeFragmentDirections
 
 class ShoeListFragment : Fragment() {
 
@@ -47,8 +48,8 @@ class ShoeListFragment : Fragment() {
             }
         })
 
-        binding.addShoeButton.setOnClickListener {
-            Toast.makeText(this.context, "Add Shoe button was clicked.", Toast.LENGTH_SHORT).show()
+        binding.addShoeButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailsFragment())
         }
 
         setHasOptionsMenu(true)

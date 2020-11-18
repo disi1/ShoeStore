@@ -14,4 +14,5 @@ class ShoesViewModel: ViewModel() {
     )
     val shoes: LiveData<List<Shoe>>
         get() = _shoes
+
 }

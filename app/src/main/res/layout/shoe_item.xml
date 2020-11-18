@@ -59,12 +59,11 @@
                     android:id="@+id/shoe_size_unit_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
                     android:fontFamily="sans-serif-light"
                     android:text="@string/cm"
                     android:textColor="?android:attr/textColorSecondary"
                     app:layout_constraintBaseline_toBaselineOf="@+id/shoe_size_text"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toStartOf="@id/guidelineEnd" />
 
                 <LinearLayout
                     android:id="@+id/shoe_details_layout"
@@ -107,16 +106,14 @@
 
                 <ScrollView
                     android:id="@+id/shoe_description_scroll"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:background="#f8f9fa"
                     android:padding="8dp"
                     app:layout_constraintBottom_toTopOf="@id/favorite_button"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineBegin"
                     app:layout_constraintTop_toBottomOf="@+id/shoe_details_layout">
 
                     <TextView
@@ -139,6 +136,20 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="16dp"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineBegin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="16dp"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

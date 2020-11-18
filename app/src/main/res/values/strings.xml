@@ -43,6 +43,14 @@
     <string name="content_description_shoe_item_image">Representative image for the item on sale.</string>
     <string name="logout">Logout</string>
 
+    <string name="shoe_name">Shoe name</string>
+    <string name="description">Description</string>
+    <string name="company">Company</string>
+    <string name="done">Done</string>
+    <string name="nike">Nike</string>
+    <string name="nike_air_jordan">Nike Air Jordan</string>
+    <string name="size_cm">Size (cm)</string>
+
     <!-- Shoe List Screen -->
 
 </resources>

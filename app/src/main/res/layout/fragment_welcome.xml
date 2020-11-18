@@ -2,13 +2,13 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.onboarding.WelcomeFragment">
 
-        <androidx.core.widget.NestedScrollView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true"
-            tools:context=".ui.onboarding.WelcomeFragment">
+            android:layout_height="match_parent">
+
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                             android:id="@+id/shoes"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@drawable/ic_shoe"
+                            android:src="@drawable/img_shoe"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHeight_percent="0.35"
                             app:layout_constraintStart_toStartOf="parent"
@@ -50,12 +50,12 @@
 
                         <TextView
                             android:id="@+id/moto_text1"
+                            style="@style/ShoeStoreMottoStyle"
                             android:text="@string/seek_find_enjoy"
-                            app:layout_constraintBottom_toTopOf="@+id/next_button"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/welcome_text"
-                            style="@style/ShoeStoreMottoStyle" />
+                            app:layout_constraintTop_toBottomOf="@+id/splash" />
 
                         <TextView
                             android:id="@+id/moto_text2"
@@ -65,16 +65,15 @@
                             app:layout_constraintTop_toBottomOf="@+id/moto_text1"
                             style="@style/ShoeStoreMottoStyle" />
 
-                        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/next_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_navigate_next_24"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:contentDescription="@string/content_description_welcome_fab" />
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.core.widget.NestedScrollView>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/next_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_navigate_next_24"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="24dp"
+                    android:contentDescription="@string/content_description_welcome_fab" />
+        </FrameLayout>
 </layout>

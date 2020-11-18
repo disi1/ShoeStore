@@ -21,7 +21,7 @@
                 android:layout_width="192dp"
                 android:layout_height="192dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_shoe"
+                android:src="@drawable/img_shoe"
                 android:contentDescription="@string/shoes_image_content_description" />
 
             <TextView

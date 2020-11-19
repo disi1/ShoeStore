@@ -16,9 +16,9 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:labelFor="@id/name"
+            android:labelFor="@id/name_edit_text"
             android:text="@string/shoe_name"
-            app:layout_constraintBaseline_toBaselineOf="@+id/name"
+            app:layout_constraintBaseline_toBaselineOf="@+id/name_edit_text"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline" />
@@ -27,8 +27,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/company"
-            android:labelFor="@id/company"
-            app:layout_constraintBaseline_toBaselineOf="@+id/company"
+            android:labelFor="@id/company_edit_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/company_edit_text"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline" />
 
@@ -36,8 +36,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/size_cm"
-            android:labelFor="@id/size"
-            app:layout_constraintBaseline_toBaselineOf="@+id/size"
+            android:labelFor="@id/size_edit_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/size_edit_text"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline" />
 
@@ -45,13 +45,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/description"
-            android:labelFor="@id/description"
-            app:layout_constraintBaseline_toBaselineOf="@+id/description"
+            android:labelFor="@id/description_edit_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/description_edit_text"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name"
+            android:id="@+id/name_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -63,7 +63,7 @@
             android:importantForAutofill="no" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/company"
+            android:id="@+id/company_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -73,11 +73,11 @@
             android:hint="@string/nike"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name_edit_text"
             android:importantForAutofill="no" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/description"
+            android:id="@+id/description_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -87,12 +87,12 @@
             android:maxLines="3"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/size"
+            app:layout_constraintTop_toBottomOf="@+id/size_edit_text"
             app:layout_constraintBottom_toTopOf="@id/guideline5"
             android:importantForAutofill="no" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/size"
+            android:id="@+id/size_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -101,7 +101,7 @@
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/company"
+            app:layout_constraintTop_toBottomOf="@+id/company_edit_text"
             android:importantForAutofill="no" />
 
         <Button

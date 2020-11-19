@@ -60,6 +60,6 @@
     <dialog
         android:id="@+id/shoeDetailsFragment"
         android:name="com.udacity.shoestore.ui.shoeDetails.ShoeDetailsFragment"
-        android:label="ShoeDetailsFragment"
+        android:label="Shoe Details"
         tools:layout="@layout/fragment_shoe_details"/>
 </navigation>

@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
@@ -27,6 +28,14 @@ class MainActivity : AppCompatActivity() {
 
         navController = this.findNavController(R.id.navHostFragment)
         appBarConfiguration = AppBarConfiguration(setOf(R.id.shoeListFragment))
+
+        if(ShoeStoreAppPreferences.isLoggedIn) {
+            val navInflater = navController.navInflater
+            val graph = navInflater.inflate(R.navigation.navigation)
+            graph.startDestination = R.id.shoeListFragment
+
+            navController.graph = graph
+        }
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.loginFragment || destination.id == R.id.welcomeFragment || destination.id == R.id.instructionsFragment) {

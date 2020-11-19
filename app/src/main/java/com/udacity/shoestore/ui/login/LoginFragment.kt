@@ -1,6 +1,7 @@
 package com.udacity.shoestore.ui.login
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
@@ -13,8 +14,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
+import com.udacity.shoestore.ShoeStoreAppPreferences
+import com.udacity.shoestore.ShoesViewModel
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 import kotlinx.android.synthetic.main.fragment_login.*
 
@@ -22,6 +27,7 @@ import kotlinx.android.synthetic.main.fragment_login.*
 class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
+    private val shoeViewModel: ShoesViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,6 +44,8 @@ class LoginFragment : Fragment() {
 
         binding.loginButton.setOnClickListener { view: View ->
             if(isEmailAddressValid(binding.emailEditText.text) && (isPasswordValid(binding.passwordEditText.text))) {
+                ShoeStoreAppPreferences.isLoggedIn = true
+
                 binding.passwordInputText.error = null
                 binding.emailInputText.error = null
 

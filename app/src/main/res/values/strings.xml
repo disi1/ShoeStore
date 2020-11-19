@@ -10,6 +10,7 @@
     <string name="sign_up">Sign up</string>
     <string name="appName">S H O E&#160; &#160;S H O P</string>
     <string name="shoes_image_content_description">One line drawing of a shoes pair</string>
+    <string name="shoe_image_content_description">One line drawing of a shoes pair</string>
     <string name="password_error">Password must contain at least 4 characters.</string>
     <string name="confirm_password_error">The password confirmation does not match.</string>
     <string name="cancel">Cancel</string>
@@ -45,4 +46,16 @@
 
     <!-- Shoe List Screen -->
 
+    <string name="shoe_name">Shoe name</string>
+    <string name="description">Description</string>
+    <string name="company">Company</string>
+    <string name="done">Done</string>
+    <string name="nike">Nike</string>
+    <string name="nike_air_jordan">Nike Air Jordan</string>
+    <string name="size_cm">Size (cm)</string>
+    <string name="invalidNameError">Fill in a name for your shoes.</string>
+    <string name="invalidCompanyError">Fill in the brand/company of your shoes.</string>
+    <string name="invalidSizeError">Fill in the size of your shoes.</string>
+    <string name="invalidDescriptionError">Fill in a description for your shoes.</string>
+    <string name="empty_list_call_to_action">Share the joy and start adding items to\nS H O E S H O P</string>
 </resources>

@@ -99,7 +99,6 @@
                     android:id="@+id/create_account_button"
                     style="@style/Widget.ShoeStore.Button"
                     android:text="@string/create_account"
-                    android:fontFamily="sans-serif-light"
                     android:visibility="gone"/>
 
             </RelativeLayout>
@@ -125,7 +124,6 @@
                     android:id="@+id/cancel_button"
                     style="@style/Widget.ShoeStore.OutlinedButton"
                     android:text="@string/cancel"
-                    android:fontFamily="sans-serif-light"
                     android:visibility="gone"/>
             </RelativeLayout>
 

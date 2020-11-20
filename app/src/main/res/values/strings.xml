@@ -18,23 +18,15 @@
 
     <!-- Welcome Screen -->
     <string name="welcome_text">Welcome to \n S H O E&#160; &#160;S H O P</string>
-    <string name="seek_find_enjoy">Seek. Find. Enjoy.</string>
-    <string name="walk_your_colors">Walk your colors.</string>
     <string name="content_description_welcome_fab">Tap to go to Instructions</string>
     <string name="splash_of_color_content_description">Splash of color</string>
+    <string name="motto">Seek. Find. Enjoy.\nWalk your colors.</string>
+
 
     <!-- Instructions Screen -->
     <string name="instructions_first_item_title">Discover our offering!</string>
-    <string name="instructions_first_item_text1">Thousands to choose from.</string>
-    <string name="instructions_first_item_text2">Find what you love ❤.</string>
-    <string name="instructions_first_item_text3">Get in touch and buy.</string>
     <string name="instructions_second_item_title">Add your own</string>
-    <string name="instructions_second_item_text1">Just type the details like brand, color, size.</string>
-    <string name="instructions_second_item_text2">Drop your contact info, then carry on.</string>
-    <string name="instructions_second_item_text3">They\'ll be in good \'feet\' &#128522;.</string>
     <string name="instructions_third_item_title">Want to keep it private?</string>
-    <string name="instructions_third_item_text1">After visiting, simply log out.</string>
-    <string name="instructions_third_item_text2">Nobody will ever know.</string>
     <string name="let_s_go">Let\'s go</string>
     <string name="content_description_more_button_instructions">Icon displayed in the upper right corner in the Shoes list screen.</string>
     <string name="content_description_add_button_instructions">Button displayed in the bottom right corner of the Shoes list screen.</string>
@@ -43,6 +35,9 @@
     <string name="cm">cm</string>
     <string name="content_description_shoe_item_image">Representative image for the item on sale.</string>
     <string name="logout">Logout</string>
+    <string name="instructions_second_item_details">Just type the details like brand, color, size.\nDrop your contact info, then carry on.\nThey\'ll be in good \'feet\' &#128522;.</string>
+    <string name="instructions_first_item_details">Thousands to choose from.\nFind what you love ❤.\nGet in touch and buy.</string>
+    <string name="instructions_third_item_details">After visiting, simply logout.\nNobody will ever know &#128521;.</string>
 
     <!-- Shoe List Screen -->
 

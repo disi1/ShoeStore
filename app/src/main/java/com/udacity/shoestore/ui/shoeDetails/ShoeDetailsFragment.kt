@@ -1,11 +1,9 @@
 package com.udacity.shoestore.ui.shoeDetails
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -13,6 +11,8 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.ShoesViewModel
 import com.udacity.shoestore.databinding.FragmentShoeDetailsBinding
 
+// I decided to use a BottomSheetDialogFragment instead of a Fragment because I think it was a better idea in terms of UX
+// rather than using the entire screen for just a few fields and a couple of buttons
 class ShoeDetailsFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentShoeDetailsBinding

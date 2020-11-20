@@ -3,10 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-
-    </data>
-
+    <!-- A ConstraintLayout proves to be more efficient in this case,
+    since for a layout of this complexity the view hierarchy would have been deeper had we used a Linear Layout
+    container with several other Linear Layouts (horizontal) inside it encapsulating the other necessary views. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

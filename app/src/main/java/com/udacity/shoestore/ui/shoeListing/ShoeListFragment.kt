@@ -29,6 +29,8 @@ class ShoeListFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
+        (activity as AppCompatActivity).supportActionBar?.title = "Shoes"
+
         val binding = DataBindingUtil.inflate<FragmentShoeListBinding>(
             inflater,
             R.layout.fragment_shoe_list,
@@ -37,11 +39,6 @@ class ShoeListFragment : Fragment() {
         )
 
         shoeViewModel.shoes.observe(viewLifecycleOwner, { shoeList ->
-            if(shoeList.isEmpty()) {
-                binding.emptyListLinearLayout.visibility = View.VISIBLE
-            } else {
-                binding.emptyListLinearLayout.visibility = View.GONE
-
                 binding.shoeItemsLinearLayout.removeAllViews()
 
                 shoeList.forEach {
@@ -56,7 +53,6 @@ class ShoeListFragment : Fragment() {
 
                     binding.shoeItemsLinearLayout.addView(itemBinding.root)
                 }
-            }
         })
 
         binding.addShoeButton.setOnClickListener { view: View ->

@@ -7,8 +7,10 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fillViewport="true"
         tools:context=".ui.login.LoginFragment">
 
+    <!-- The LinearLayout is efficient here since there are only several views, all of them being vertically stacked-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,24 +86,20 @@
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button"
+                android:text="@string/login"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="25dp"
+                style="@style/Widget.ShoeStore.Button" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/login_button"
-                    android:text="@string/login"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="25dp"
-                    style="@style/Widget.ShoeStore.Button" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/create_account_button"
-                    style="@style/Widget.ShoeStore.Button"
-                    android:text="@string/create_account"
-                    android:visibility="gone"/>
-
-            </RelativeLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/create_account_button"
+                style="@style/Widget.ShoeStore.Button"
+                android:layout_gravity="center"
+                android:text="@string/create_account"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/no_account_text"
@@ -111,22 +109,18 @@
                 android:text="@string/no_account"
                 android:fontFamily="sans-serif-light"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sign_up_button"
+                style="@style/Widget.ShoeStore.OutlinedButton"
+                android:layout_gravity="center"
+                android:text="@string/sign_up"/>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/sign_up_button"
-                    style="@style/Widget.ShoeStore.OutlinedButton"
-                    android:text="@string/sign_up"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/cancel_button"
-                    style="@style/Widget.ShoeStore.OutlinedButton"
-                    android:text="@string/cancel"
-                    android:visibility="gone"/>
-            </RelativeLayout>
-
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_button"
+                style="@style/Widget.ShoeStore.OutlinedButton"
+                android:text="@string/cancel"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
         </LinearLayout>
     </ScrollView>
 </layout>

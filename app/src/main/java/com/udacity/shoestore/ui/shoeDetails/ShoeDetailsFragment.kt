@@ -1,9 +1,12 @@
 package com.udacity.shoestore.ui.shoeDetails
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -29,17 +32,32 @@ class ShoeDetailsFragment : BottomSheetDialogFragment() {
         )
 
         binding.cancelButton.setOnClickListener {
+            shoeViewModel.shoeName.value = null
+            shoeViewModel.shoeDescription.value = null
+            shoeViewModel.shoeSize.value = null
+            shoeViewModel.shoeCompany.value = null
             dismiss()
+        }
+
+        binding.nameEditText.afterTextChanged { shoeName ->
+            shoeViewModel.shoeName.value = shoeName
+        }
+
+        binding.companyEditText.afterTextChanged { shoeCompany ->
+            shoeViewModel.shoeCompany.value = shoeCompany
+        }
+
+        binding.descriptionEditText.afterTextChanged { shoeDescription ->
+            shoeViewModel.shoeDescription.value = shoeDescription
+        }
+
+        binding.sizeEditText.afterTextChanged { shoeSize ->
+            shoeViewModel.shoeSize.value = shoeSize
         }
 
         binding.doneButton.setOnClickListener {
             if(isNameValid() && isCompanyValid() && isSizeValid() && isDescriptionValid()) {
-                shoeViewModel.addShoe(
-                    binding.nameEditText.text.toString(),
-                    binding.companyEditText.text.toString(),
-                    binding.sizeEditText.text.toString().toDouble(),
-                    binding.descriptionEditText.text.toString()
-                )
+                shoeViewModel.addShoe()
                 dismiss()
             }
         }
@@ -87,4 +105,15 @@ class ShoeDetailsFragment : BottomSheetDialogFragment() {
         }
     }
 
+    private fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
+        this.addTextChangedListener(object: TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                afterTextChanged.invoke(s.toString())
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
+    }
 }

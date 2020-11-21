@@ -1,16 +1,20 @@
 package com.udacity.shoestore
 
+import android.util.Log
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
+import androidx.databinding.ObservableField
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
+import timber.log.Timber
+import java.util.*
 
 class ShoesViewModel: ViewModel() {
 
-    val shoeName = MutableLiveData<String>()
-    val shoeCompany = MutableLiveData<String>()
-    val shoeSize = MutableLiveData<String>()
-    val shoeDescription = MutableLiveData<String>()
+    var shoe: Shoe? = Shoe("", 0.0, "", "")
+    val shoeObservable = ShoeSizeObservable()
 
     private val shoesList = mutableListOf(
         Shoe(
@@ -25,15 +29,38 @@ class ShoesViewModel: ViewModel() {
         get() = _shoes
 
     fun addShoe() {
-        val shoe = Shoe(
-                shoeName.value.toString(),
-                shoeSize.value.toString().toDouble(),
-                shoeCompany.value.toString(),
-                shoeDescription.value.toString(),
-                mutableListOf())
-
-        shoesList.add(shoe)
-
+        shoe?.let {
+            it.size = shoeObservable.shoeSize.toDouble()
+            shoesList.add(it)
+        }
         _shoes.value = shoesList
+        cleanup()
+    }
+
+    fun cancel() {
+        cleanup()
+    }
+
+    private fun cleanup() {
+        shoeObservable.shoeSize = ""
+        shoe = Shoe("", 0.0, "", "")
+    }
+
+    inner class ShoeSizeObservable : BaseObservable() {
+        var shoeSize = ""
+
+        @Bindable
+        fun getSize() : String {
+            return shoeSize
+        }
+
+        @Bindable
+        fun setSize(size: String) {
+            if (shoeSize != size) {
+                shoeSize = size
+
+                notifyPropertyChanged(BR.size)
+            }
+        }
     }
 }

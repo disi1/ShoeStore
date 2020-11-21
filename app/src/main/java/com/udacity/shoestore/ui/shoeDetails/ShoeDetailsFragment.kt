@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.udacity.shoestore.R
 import com.udacity.shoestore.ShoesViewModel
@@ -31,28 +32,11 @@ class ShoeDetailsFragment : BottomSheetDialogFragment() {
             false
         )
 
+        binding.shoeViewModel = shoeViewModel
+
         binding.cancelButton.setOnClickListener {
-            shoeViewModel.shoeName.value = null
-            shoeViewModel.shoeDescription.value = null
-            shoeViewModel.shoeSize.value = null
-            shoeViewModel.shoeCompany.value = null
+            shoeViewModel.cancel()
             dismiss()
-        }
-
-        binding.nameEditText.afterTextChanged { shoeName ->
-            shoeViewModel.shoeName.value = shoeName
-        }
-
-        binding.companyEditText.afterTextChanged { shoeCompany ->
-            shoeViewModel.shoeCompany.value = shoeCompany
-        }
-
-        binding.descriptionEditText.afterTextChanged { shoeDescription ->
-            shoeViewModel.shoeDescription.value = shoeDescription
-        }
-
-        binding.sizeEditText.afterTextChanged { shoeSize ->
-            shoeViewModel.shoeSize.value = shoeSize
         }
 
         binding.doneButton.setOnClickListener {
@@ -66,54 +50,42 @@ class ShoeDetailsFragment : BottomSheetDialogFragment() {
     }
 
     private fun isNameValid(): Boolean {
-        if(binding.nameEditText.text.toString() == "") {
+        return if(binding.nameEditText.text.toString() == "") {
             binding.nameEditText.error = getString(R.string.invalidNameError)
-            return false
+            false
         } else {
             binding.nameEditText.error = null
-            return true
+            true
         }
     }
 
     private fun isCompanyValid(): Boolean {
-        if(binding.companyEditText.text.toString() == "") {
+        return if(binding.companyEditText.text.toString() == "") {
             binding.companyEditText.error = getString(R.string.invalidCompanyError)
-            return false
+            false
         } else {
             binding.companyEditText.error = null
-            return true
+            true
         }
     }
 
     private fun isSizeValid(): Boolean {
-        if(binding.sizeEditText.text.toString() == "") {
+        return if(binding.sizeEditText.text.toString() == "") {
             binding.sizeEditText.error = getString(R.string.invalidSizeError)
-            return false
+            false
         } else {
             binding.sizeEditText.error = null
-            return true
+            true
         }
     }
 
     private fun isDescriptionValid(): Boolean {
-        if(binding.descriptionEditText.text.toString() == "") {
+        return if(binding.descriptionEditText.text.toString() == "") {
             binding.descriptionEditText.error = getString(R.string.invalidDescriptionError)
-            return false
+            false
         } else {
             binding.descriptionEditText.error = null
-            return true
+            true
         }
-    }
-
-    private fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
-        this.addTextChangedListener(object: TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                afterTextChanged.invoke(s.toString())
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-        })
     }
 }

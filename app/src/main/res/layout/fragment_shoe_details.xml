@@ -63,6 +63,7 @@
             android:hint="@string/nike_air_jordan"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:text="@={shoeViewModel.shoe.name}"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="@+id/guideline3" />
@@ -77,6 +78,7 @@
             android:hint="@string/nike"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:text="@={shoeViewModel.shoe.company}"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/name_edit_text" />
@@ -91,6 +93,7 @@
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:maxLines="3"
+            android:text="@={shoeViewModel.shoe.description}"
             app:layout_constraintBottom_toTopOf="@id/guideline5"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -105,6 +108,7 @@
             android:gravity="start|top"
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
+            android:text="@={shoeViewModel.shoeObservable.size}"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/company_edit_text" />

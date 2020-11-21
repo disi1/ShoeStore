@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+    <!-- Credits for the images used in this layout are attributed to Cristian Newman and Karen Awaida.
+    The images can by found by following these links:
+    https://unsplash.com/photos/n1DnbYifLNg
+    https://unsplash.com/photos/yDrloeSQ9lA
+
+    According to Unsplash:
+
+    "Unsplash photos are made to be used freely.
+    Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy,
+    modify, distribute, perform, and use photos from Unsplash for free, including for commercial purposes,
+    without permission from or attributing the photographer or Unsplash. This license does not include the
+    right to compile photos from Unsplash to replicate a similar or competing service."-->
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -30,10 +43,10 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/img_feet"
+                    android:src="@drawable/img_unsplash_footprint"
                     app:layout_constraintBottom_toTopOf="@+id/shoe_name_text"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.40"
+                    app:layout_constraintHeight_percent="0.45"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintWidth_percent="1"
@@ -51,7 +64,7 @@
                     android:text="@{shoe.name}"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     tools:text="Converse Chuck Taylor"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     app:layout_constraintTop_toBottomOf="@+id/shoe_image"
                     app:layout_constraintStart_toStartOf="@id/guidelineBegin"
@@ -63,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="8dp"
                     android:fontFamily="sans-serif-light"
                     android:text="@{shoe.company}"
                     android:lines="1"

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!-- Credits for the image used in this layout are attributed to Irene Kredenets.
+    The images can by found by following ths link:
+    https://unsplash.com/photos/dwKiHoqqxk8
+
+    According to Unsplash:
+
+    "Unsplash photos are made to be used freely.
+    Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy,
+    modify, distribute, perform, and use photos from Unsplash for free, including for commercial purposes,
+    without permission from or attributing the photographer or Unsplash. This license does not include the
+    right to compile photos from Unsplash to replicate a similar or competing service."-->
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -23,7 +35,7 @@
                 android:layout_width="192dp"
                 android:layout_height="192dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/img_shoe"
+                android:src="@drawable/img_unsplash_shoes"
                 android:contentDescription="@string/shoes_image_content_description" />
 
             <TextView

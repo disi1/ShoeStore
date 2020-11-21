@@ -27,7 +27,6 @@ import kotlinx.android.synthetic.main.fragment_login.*
 class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
-    private val shoeViewModel: ShoesViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

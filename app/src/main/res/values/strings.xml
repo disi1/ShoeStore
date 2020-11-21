@@ -48,9 +48,9 @@
     <string name="nike">Nike</string>
     <string name="nike_air_jordan">Nike Air Jordan</string>
     <string name="size_cm">Size (cm)</string>
-    <string name="invalidNameError">Fill in a name for your shoes.</string>
-    <string name="invalidCompanyError">Fill in the brand/company of your shoes.</string>
-    <string name="invalidSizeError">Fill in the size of your shoes.</string>
-    <string name="invalidDescriptionError">Fill in a description for your shoes.</string>
+    <string name="invalidNameError">Fill in a name for the shoes.</string>
+    <string name="invalidCompanyError">Fill in the brand/company of the shoes.</string>
+    <string name="invalidSizeError">Fill in the size of the shoes.</string>
+    <string name="invalidDescriptionError">Fill in a description for the shoes.</string>
     <string name="empty_list_call_to_action">Share the joy and start adding items to\nS H O E S H O P</string>
 </resources>

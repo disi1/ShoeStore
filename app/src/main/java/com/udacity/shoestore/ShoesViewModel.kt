@@ -1,15 +1,11 @@
 package com.udacity.shoestore
 
-import android.util.Log
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
-import androidx.databinding.ObservableField
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
-import timber.log.Timber
-import java.util.*
 
 class ShoesViewModel: ViewModel() {
 
@@ -21,7 +17,7 @@ class ShoesViewModel: ViewModel() {
             "Converse Chuck Taylor",
             25.5,"Chuck Taylor All Star",
             "Unisex High Top Sneakers.\n\nThe iconic innovative shoes that made headlines when announced.\nNever worn, in their original box, mint condition.",
-            listOf("img_converse_shoes"))
+            listOf("img_unsplash_converse"))
     )
 
     private val _shoes = MutableLiveData<List<Shoe>>(shoesList)

@@ -1,78 +1,48 @@
 # The Shoe Store
 
-This project will consist of five screens. You don't have to create a shoe store, you can use any other item as long as you create the following screens. You will be creating:
+**Shoe Store** is a mobile application which emulates the most basic functionalities for a digital store app. It contains five screens:
 
-1. Login screen: Email and password fields and labels plus create and login buttons
+1. Login screen
 2. Welcome onboarding screen
 3. Instructions onboarding screen
 4. Shoe Listing screen
-5. Shoe Detail screen for adding a new shoe
+5. Shoe Detail screen for adding a new pair of shoes
 
-## Getting Started
+I developed this application as part of the Udacity's [Android Kotlin Developer Nanodegree](https://www.udacity.com/course/android-kotlin-developer-nanodegree--nd940) Program.
+The main focus of this project was to apply the skills in building layouts and navigation files while following the **Single Activity architecture**.
 
-Open the starter project in the latest stable version of Android Studio.
+In building the screens of the application, I implemented different Layout styles like LinearLayout and ConstrainLayout to match the complexity of the layout of the screen.
 
-Open the starter project in Android Studio
+The app leverages the following components from the Jetpack library:
 
-##Steps
+* [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
+* [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
+* [Data Binding](https://developer.android.com/topic/libraries/data-binding/)
+* [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/)
 
-1. Open the starter project in Android Studio
+This basic app lists the items by using ScrollView and LinearLayout. A new layout is created for each item upon saving the details and added programmatically as a child view to the LinearLayout.
+The details of each item are saved to the ViewModel using Two-Way Data Binding.
 
-2. Add the navigation libraries to the app build.gradle file
+## Application Flow
+Take a look at the things you can do with this app:
 
-3. Add the safe-arg plugin to the main and app build.gradle file
+# Login
 
-4. Create a new navigation xml file
+<img src="screenshots/screen_login_1.png" width="400px"/>
+<img src="screenshots/screen_login_2.png" width="400px"/>
+<img src="screenshots/screen_login_3.png" width="400px"/>
 
-5. Create a new Login destination.
+# Onboarding
+* Note - once on the List screen the user cannot go back to the Onboarding or Login screens by tapping on the "Back" button. Users can logout by accessing the contextual menu in the List screen.
 
-   * Include email and password labels 
+<img src="screenshots/screen_onboarding_1.png" width="400px"/>
+<img src="screenshots/screen_onboarding_2.png" width="400px"/>
 
-   - Include email and password fields
-   - Create buttons for creating a new login and logging in with an existing account
-   - Clicking either button should navigate to the Welcome Screen.
+# Items list + Adding a new item
 
-6. Create a new Welcome screen destination that includes:
+<img src="screenshots/screen_list.png" width="400px"/>
+<img src="screenshots/screen_add_item.png" width="400px"/>
 
-   * A new layout
-   * At least 2 textviews
-   * A navigation button with actions to navigate to the instructions screen
 
-7. Create a new Instruction destination that includes:
-
-   * A new layout
-   * At least 2 textviews
-   * A navigation button with actions to navigate to the shoe list screen
-
-8. Create a class that extends ViewModel
-
-   *  Use a LiveData field that returns the list of shoes
-
-9. Create a new Shoe List destination that includes:
-
-   * A new layout
-   * A ScrollView
-   * A LinearLayout for Shoe Items
-   * A FloatingActionButton with an action to navigate to the shoe detail screen
-
-10. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
-
-11. Create a new Shoe Detail destination that includes:
-
-    * A new layout
-    * A TextView label and EditView for the
-      * Shoe Name
-      * Company
-      * Shoe Size
-      * Description
-    * A Cancel button with an action to navigate back to the shoe list screen
-    * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
-
-12. Make sure you can’t go back to onboarding screens
-
-13. In the Shoe List screen:
-
-    * Use an Activity level ViewModel to hold a list of Shoes (use by activityViewModels)
-    * Observe the shoes variable from the ViewModel
-    * Use DataBindingUtil to inflate the shoe_list layout
-    * Add a new layout item into the scrollview for each shoe.
+## Get in touch
+Reach out at [diana.sica29@gmail.com](mailto:diana.sica29@gmail.com)
